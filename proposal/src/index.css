@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  body {
+    @apply antialiased transition-colors duration-500 overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-romantic-cream dark:bg-romantic-dark;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-romantic-rose/40 dark:bg-romantic-gold/30 rounded-full hover:bg-romantic-rose/60 transition-colors;
+}
+
+/* Glassmorphism utility classes */
+.glass-card {
+  @apply backdrop-blur-md bg-white/80 dark:bg-romantic-maroon/80 border border-white/60 dark:border-romantic-gold/30 shadow-xl transition-all duration-300;
+}
+
+.glass-card-hover {
+  @apply hover:shadow-2xl hover:-translate-y-1 hover:border-romantic-rose/60 dark:hover:border-romantic-gold;
+}
